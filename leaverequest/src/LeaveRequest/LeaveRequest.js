@@ -1,21 +1,28 @@
 import React, { useState } from 'react';
 import '../LeaveRequest/LeaveRequest.css';
+import { FaUser } from "react-icons/fa6";
 
 export default function LeaveRequest() {
   const [message, setMessage] = useState('');
   const handleSubmit = (event) => {
     event.preventDefault();
-    setMessage(' Waiting for approval from your administrator');
+    setMessage(' Waiting for approval from your administrator!');
   };
 
   return (
+    
     <div className="absolute mt-52 ml-48  
                     w-80 float-left border-2 p-2  
                     rounded-xl shadow-xl text-xl">
                        
+
       <form onSubmit={handleSubmit}>
       <h1>Leave Request Form</h1>
-        <p className="text-2xl">Leave Request</p>
+      <br></br> 
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <FaUser size={50}  />
+      </div>
+      
         <div>
           <label className="text-sm">Name*</label>
           <br></br>
